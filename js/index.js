@@ -68,10 +68,7 @@ links.forEach(link => {
 })
 
 
-// Green Sock
 
-// CSSPlugin.defaultTransformPerspective = 400; 
-// gsap.to("img", {duration: 3, rotationY: 360});
 
 
 
