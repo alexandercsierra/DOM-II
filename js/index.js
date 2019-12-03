@@ -2,7 +2,11 @@
 
 let header = document.querySelector("header");
 let btns = document.querySelectorAll(".btn");
+let p = document.querySelectorAll("p");
 let headerImg = document.querySelector(".intro img");
+let h2 = document.querySelectorAll("h2");
+let imgs = document.querySelectorAll(".img-content img");
+let links = document.querySelectorAll("nav a");
 
 
 header.addEventListener("mouseover", e => {
@@ -25,12 +29,44 @@ btns.forEach(btn => {
     });
 })
 
-headerImg.addEventListener("keydown", e => {
-    if (keyCode === keyQ){
-        headerImg.style.transform = "rotate(0.5turn)";
-    }
-    
-});
+p.forEach(para => {
+    para.addEventListener("copy", e => {
+        para.style.background = "#FFEBCD";
+    });
+})
+
+h2.forEach(h2 => {
+    h2.addEventListener("mousedown", e => {
+        h2.style.transform = "scale(1.5)";
+    });
+})
+
+h2.forEach(h2 => {
+    h2.addEventListener("mouseup", e => {
+        h2.style.transform = "scale(1)";
+    });
+})
+
+
+headerImg.addEventListener("wheel", e => {
+    headerImg.style.transform = "rotate(0.5turn)";
+})
+
+imgs.forEach(imgs => {
+    imgs.addEventListener("contextmenu", e => {
+        imgs.src = "https://demotix.com/wp-content/uploads/2019/05/crazy-looing-cat.jpg";
+    });
+})
+
+links.forEach(link => {
+    link.addEventListener("mouseenter", e => {
+        link.style.transform = "translate(120px, 50%)";
+    });
+})
+
+
+
+
 
 
 
