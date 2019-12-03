@@ -48,13 +48,16 @@ h2.forEach(h2 => {
 })
 
 
-headerImg.addEventListener("wheel", e => {
+headerImg.addEventListener("click", e => {
     headerImg.style.transform = "rotate(0.5turn)";
+    CSSPlugin.defaultTransformPerspective = 400; 
+    gsap.to("img", {duration: 3, rotationY: 360});
 })
 
 imgs.forEach(imgs => {
     imgs.addEventListener("contextmenu", e => {
         imgs.src = "https://demotix.com/wp-content/uploads/2019/05/crazy-looing-cat.jpg";
+        
     });
 })
 
@@ -63,6 +66,12 @@ links.forEach(link => {
         link.style.transform = "translate(120px, 50%)";
     });
 })
+
+
+// Green Sock
+
+// CSSPlugin.defaultTransformPerspective = 400; 
+// gsap.to("img", {duration: 3, rotationY: 360});
 
 
 
