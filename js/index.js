@@ -17,6 +17,10 @@ header.addEventListener("mouseout", e => {
     header.style.background = "white";
 });
 
+header.addEventListener("click", e => {
+    header.style.background = "white";
+});
+
 btns.forEach(btn => {
     btn.addEventListener("click", e => {
         btn.style.background = "#4cb094";
@@ -65,6 +69,12 @@ links.forEach(link => {
     link.addEventListener("mouseenter", e => {
         link.style.transform = "translate(120px, 50%)";
     });
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        link.style.background = "white";
+        link.style.color = "black";
+        e.stopPropagation();
+    })
 })
 
 
