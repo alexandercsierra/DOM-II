@@ -10,7 +10,6 @@ var blocksArr = Array.from(document.querySelectorAll(".block"));
 let currentBlock = "";
 
 
-  
 
 blocks.forEach(block => {
 
@@ -22,44 +21,25 @@ blocks.forEach(block => {
         paused: true
       });
 
-    // block.addEventListener("click", e => {
-    //     parent.insertBefore(block, parent.firstChild);   
-    // });
+    var tween2 = gsap.to(block, 2.5, { ease: Elastic.easeOut.config(1, 0.3), y: "-30%", paused: true});
+
 
     block.addEventListener("mousedown", e => {
         parent.insertBefore(block, parent.firstChild);
         tween.play(); 
+        tween2.restart();
         
     });
 
     block.addEventListener("mouseleave", e => {
         
         tween.pause();
+        
     });
 
-    // block.addEventListener("mouseup", e => {
-    //     tween.pause();  
-    // });
 
 
 });
 
 
 
-//which child are you currently?
-
-// var index = Array.prototype.indexOf.call(parent.children, block);
-// var spot = 0;
-
-//if not first, subtract 1 from child number and move up that number of spots
-
-// if (index !== 0){
-//     spot = index -1;
-
-// }
-
-//remove divs from page
-//reappend divs in new order
-//as block moves up the block currently in that spot moves down
-
-//repeat until in spot 1
